@@ -9,11 +9,13 @@ function EmpleadosPage() {
   }, []);
 
   return (
-    <div>
-      <h2>Lista de empleados</h2>  
-      <ul>
+    <div className="container mt-4">
+      <h2 className="mb-3">Lista de empleados</h2>
+      <ul className="list-group">
         {empleados.map((e) => (
-          <li key={empleadoService.id}>{e.nombre}</li>
+          <li key={e.id} className="list-group-item">
+            {e.nombre}
+          </li>
         ))}
       </ul>
     </div>
